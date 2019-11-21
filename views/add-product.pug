@@ -1,0 +1,15 @@
+extends layouts/headerLayout.pug
+
+block cssLink
+    link(rel = "stylesheet", href="/css/forms.css")
+    link(rel = "stylesheet", href="/css/product.css")
+block main
+    form.product-form(action="/admin/add-product", method="POST")
+        .form-control
+            label(for="title") Title
+            input(type="text", name="title", id="title")
+            label(for="name") Name
+            input(type="text", name="name", id="name")
+            label(for="price") Price
+            input(type="text", name="price", id="price")
+        button.btn(type="submit") Add Product
